@@ -1,0 +1,32 @@
+{
+  "name": "bdemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run client & npm run server",
+    "profiler": "npm run client && npm run server-profiler",
+    "client": "npx webpack serve",
+    "server": "npx ts-node-dev ./src/server/server-test.ts",
+    "bot": "npx ts-node-dev ./src/bot/bot-test.ts",
+    "server-profiler": "npx ts-node-dev --inspect -- ./src/server/server-test.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-loader": "^9.3.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.7.4",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.2"
+  },
+  "dependencies": {
+    "nengi": "github:timetocode/nengi#nengi2-experimental",
+    "nengi-buffers": "^0.1.0",
+    "nengi-uws-instance-adapter": "^0.1.0",
+    "nengi-websocket-client-adapter": "^0.1.0",
+    "nengi-ws-client-adapter": "^0.1.0",
+    "pixi.js": "^6.4.2"
+  }
+}
